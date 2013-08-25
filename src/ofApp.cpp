@@ -3,8 +3,8 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	camWidth 		= 720;	// try to grab at this size. 
-	camHeight 		= 480;
+	camWidth 		= 320;	// try to grab at this size.
+	camHeight 		= 240;
 
     //we can now get back a list of devices. 
 	vector<ofVideoDevice> devices = vidGrabber.listDevices();
@@ -27,14 +27,12 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 	
-	ofBackground(100,100,100);
-	
 	vidGrabber.update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	vidGrabber.draw(0,0);
+	vidGrabber.draw(0,0,720,480);
 }
 
 

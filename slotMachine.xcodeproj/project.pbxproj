@@ -83,6 +83,17 @@
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		F441D0B717CA88450018922E /* Instructions.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Instructions.txt; sourceTree = "<group>"; };
+		F441D0B917CA88450018922E /* ofxNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxNetwork.h; sourceTree = "<group>"; };
+		F441D0BA17CA88450018922E /* ofxNetworkUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxNetworkUtils.h; sourceTree = "<group>"; };
+		F441D0BB17CA88450018922E /* ofxTCPClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTCPClient.cpp; sourceTree = "<group>"; };
+		F441D0BC17CA88450018922E /* ofxTCPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxTCPClient.h; sourceTree = "<group>"; };
+		F441D0BD17CA88450018922E /* ofxTCPManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTCPManager.cpp; sourceTree = "<group>"; };
+		F441D0BE17CA88450018922E /* ofxTCPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxTCPManager.h; sourceTree = "<group>"; };
+		F441D0BF17CA88450018922E /* ofxTCPServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTCPServer.cpp; sourceTree = "<group>"; };
+		F441D0C017CA88450018922E /* ofxTCPServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxTCPServer.h; sourceTree = "<group>"; };
+		F441D0C117CA88450018922E /* ofxUDPManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxUDPManager.cpp; sourceTree = "<group>"; };
+		F441D0C217CA88450018922E /* ofxUDPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxUDPManager.h; sourceTree = "<group>"; };
 		F4D1FAF117CA8110003FD778 /* slotMachineDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slotMachineDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +128,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				F441D0B517CA88450018922E /* ofxNetwork */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -198,6 +210,41 @@
 				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
 			);
 			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		F441D0B517CA88450018922E /* ofxNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				F441D0B617CA88450018922E /* docs */,
+				F441D0B817CA88450018922E /* src */,
+			);
+			name = ofxNetwork;
+			path = ../../../addons/ofxNetwork;
+			sourceTree = "<group>";
+		};
+		F441D0B617CA88450018922E /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				F441D0B717CA88450018922E /* Instructions.txt */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		F441D0B817CA88450018922E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F441D0B917CA88450018922E /* ofxNetwork.h */,
+				F441D0BA17CA88450018922E /* ofxNetworkUtils.h */,
+				F441D0BB17CA88450018922E /* ofxTCPClient.cpp */,
+				F441D0BC17CA88450018922E /* ofxTCPClient.h */,
+				F441D0BD17CA88450018922E /* ofxTCPManager.cpp */,
+				F441D0BE17CA88450018922E /* ofxTCPManager.h */,
+				F441D0BF17CA88450018922E /* ofxTCPServer.cpp */,
+				F441D0C017CA88450018922E /* ofxTCPServer.h */,
+				F441D0C117CA88450018922E /* ofxUDPManager.cpp */,
+				F441D0C217CA88450018922E /* ofxUDPManager.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
