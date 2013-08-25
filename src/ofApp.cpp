@@ -2,25 +2,6 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
-	/*camWidth 		= 320;	// try to grab at this size.
-	camHeight 		= 240;
-
-    //we can now get back a list of devices. 
-	vector<ofVideoDevice> devices = vidGrabber.listDevices();
-	
-    for(int i = 0; i < devices.size(); i++){
-		cout << devices[i].id << ": " << devices[i].deviceName; 
-        if( devices[i].bAvailable ){
-            cout << endl;
-        }else{
-            cout << " - unavailable " << endl; 
-        }
-	}
-    
-	vidGrabber.setDeviceID(0);
-	vidGrabber.setDesiredFrameRate(60);
-	vidGrabber.initGrabber(camWidth,camHeight);*/
     
     serial.setup("/dev/ttyACM0", 9600);
     
@@ -31,13 +12,8 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	
-	//vidGrabber.update();
     
     if(server.isConnected() && server.getNumClients() > 0) {
-        /*ostringstream convert;
-        convert << server.getLastID();
-        server.sendToAll(convert.str());*/
         string response = server.receive(0);
         if(response.length() > 0) {
             cout << "Receive: " << response << endl;
@@ -50,17 +26,12 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	//vidGrabber.draw(0,0,720,480);
+    
 }
 
 
 //--------------------------------------------------------------
 void ofApp::keyPressed  (int key){ 
-	
-	       
-	if (key == 's' || key == 'S'){
-		vidGrabber.videoSettings();
-	}
 	
 	
 }
@@ -98,6 +69,11 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
+}
+
+//--------------------------------------------------------------
+void ofApp::exit(){
+	server.close();
 }
 
 // trim trailing spaces
