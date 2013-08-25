@@ -24,6 +24,7 @@ class ofApp : public ofBaseApp{
         ofSerial            serial;		
     
         float               money;
+        float               displayMoney;
     
         ofxTextBlock        priceText;
 

@@ -4,6 +4,8 @@
 void ofApp::setup(){
 	ofBackground(0);
     
+    displayMoney = 0.00;
+    
     serial.setup("/dev/ttyACM0", 9600);
     
     server.setup(7678);
@@ -11,7 +13,7 @@ void ofApp::setup(){
     
     priceText.init("verdana.ttf", 80);
     
-    priceText.setText("0.00");
+    priceText.setText("0.00 $");
     
     //Initially wrap the text to the screen width
     priceText.wrapTextX(ofGetWidth());
@@ -31,14 +33,20 @@ void ofApp::update(){
             serial.writeBytes(chars,length);
         }
     }
+    
+    if(displayMoney < money) {
+        displayMoney += 0.01;
+    }
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
     
     ofSetColor(255);
-    priceText.setText(ofToString(money,2));
+    priceText.setText(ofToString(displayMoney,2)+" $");
     priceText.drawCenter(ofGetWidth()/2,(ofGetHeight()-priceText.getHeight())/2);
+    
 }
 
 
