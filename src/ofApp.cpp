@@ -5,7 +5,7 @@ void ofApp::setup(){
     
     serial.setup("/dev/ttyACM0", 9600);
     
-    server.setup(8888);
+    server.setup(7678);
     server.setVerbose(true);
 }
 
@@ -73,6 +73,7 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 
 //--------------------------------------------------------------
 void ofApp::exit(){
+    cout << "Close server";
 	server.close();
 }
 
