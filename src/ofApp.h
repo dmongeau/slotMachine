@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxNetwork.h"
+#include "ofxTextBlock.h"
 
 class ofApp : public ofBaseApp{
 
@@ -20,5 +21,10 @@ class ofApp : public ofBaseApp{
         void exit();
     
         ofxTCPServer        server;
-        ofSerial            serial;
+        ofSerial            serial;		
+    
+        float               money;
+    
+        ofxTextBlock        priceText;
+
 };

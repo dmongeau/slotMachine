@@ -2,11 +2,19 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	ofBackground(0);
     
     serial.setup("/dev/ttyACM0", 9600);
     
     server.setup(7678);
     server.setVerbose(true);
+    
+    priceText.init("verdana.ttf", 80);
+    
+    priceText.setText("0.00");
+    
+    //Initially wrap the text to the screen width
+    priceText.wrapTextX(ofGetWidth());
 }
 
 
@@ -19,6 +27,7 @@ void ofApp::update(){
             cout << "Receive: " << response << endl;
             unsigned char* chars = (unsigned char*) response.c_str(); // cast from string to unsigned char*
             int length = response.length();
+            money += (ofToFloat(response)*0.25);
             serial.writeBytes(chars,length);
         }
     }
@@ -27,6 +36,9 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
+    ofSetColor(255);
+    priceText.setText(ofToString(money,2));
+    priceText.drawCenter(ofGetWidth()/2,(ofGetHeight()-priceText.getHeight())/2);
 }
 
 

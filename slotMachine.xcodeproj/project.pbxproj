@@ -94,6 +94,13 @@
 		F441D0C017CA88450018922E /* ofxTCPServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxTCPServer.h; sourceTree = "<group>"; };
 		F441D0C117CA88450018922E /* ofxUDPManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxUDPManager.cpp; sourceTree = "<group>"; };
 		F441D0C217CA88450018922E /* ofxUDPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxUDPManager.h; sourceTree = "<group>"; };
+		F441D0E917CAB25D0018922E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F441D0EA17CAB25D0018922E /* testApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testApp.cpp; sourceTree = "<group>"; };
+		F441D0EB17CAB25D0018922E /* testApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testApp.h; sourceTree = "<group>"; };
+		F441D0EC17CAB25D0018922E /* install.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
+		F441D0EE17CAB25D0018922E /* ofxTextBlock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTextBlock.cpp; sourceTree = "<group>"; };
+		F441D0EF17CAB25D0018922E /* ofxTextBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxTextBlock.h; sourceTree = "<group>"; };
+		F441D0F017CAB25D0018922E /* ofxTextSuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxTextSuite.h; sourceTree = "<group>"; };
 		F4D1FAF117CA8110003FD778 /* slotMachineDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slotMachineDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,6 +135,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				F441D0E717CAB25D0018922E /* ofxTextSuite */,
 				F441D0B517CA88450018922E /* ofxNetwork */,
 			);
 			name = addons;
@@ -243,6 +251,37 @@
 				F441D0C017CA88450018922E /* ofxTCPServer.h */,
 				F441D0C117CA88450018922E /* ofxUDPManager.cpp */,
 				F441D0C217CA88450018922E /* ofxUDPManager.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F441D0E717CAB25D0018922E /* ofxTextSuite */ = {
+			isa = PBXGroup;
+			children = (
+				F441D0E817CAB25D0018922E /* example */,
+				F441D0EC17CAB25D0018922E /* install.xml */,
+				F441D0ED17CAB25D0018922E /* src */,
+			);
+			name = ofxTextSuite;
+			path = ../../../addons/ofxTextSuite;
+			sourceTree = "<group>";
+		};
+		F441D0E817CAB25D0018922E /* example */ = {
+			isa = PBXGroup;
+			children = (
+				F441D0E917CAB25D0018922E /* main.cpp */,
+				F441D0EA17CAB25D0018922E /* testApp.cpp */,
+				F441D0EB17CAB25D0018922E /* testApp.h */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
+		F441D0ED17CAB25D0018922E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F441D0EE17CAB25D0018922E /* ofxTextBlock.cpp */,
+				F441D0EF17CAB25D0018922E /* ofxTextBlock.h */,
+				F441D0F017CAB25D0018922E /* ofxTextSuite.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
